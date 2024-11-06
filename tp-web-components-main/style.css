@@ -1,0 +1,115 @@
+body {
+  font-family: "Comic Sans MS", sans-serif;
+  background: linear-gradient(135deg, #ff007f, #7f00ff);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100vh; */
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  animation: gradientShift 0.0000000001s infinite alternate;
+}
+
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(135deg, #ff007f, #7f00ff);
+  }
+  25% {
+    background: linear-gradient(135deg, #00ff7f, #007fff);
+  }
+  50% {
+    background: linear-gradient(135deg, #ff7f00, #ff007f);
+  }
+  75% {
+    background: linear-gradient(135deg, #ff00ff, #00ffff);
+  }
+  100% {
+    background: linear-gradient(135deg, #00ff7f, #ff7f00);
+  }
+}
+
+h1 {
+  font-size: 4rem; /* Taille réduite */
+  margin-bottom: 15px; /* Marges réduites */
+  color: #ffcc00;
+  text-shadow: 0 0 30px #ff0000, 0 0 60px #ffff00;
+  animation: bounceGlow 1s infinite alternate;
+}
+
+@keyframes bounceGlow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px); /* Réduction du mouvement */
+    text-shadow: 0 0 50px #ff00ff, 0 0 100px #ffcc00;
+  }
+}
+
+.currentTime {
+  background: rgba(255, 255, 255, 0.3);
+  border: 5px double #ffcc00; /* Réduction de la bordure */
+  border-radius: 30px; /* Réduction du rayon */
+  padding: 20px; /* Réduction du padding */
+  box-shadow: 0 0 30px rgba(255, 0, 255, 1), 0 0 50px rgba(0, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: rotate 1s infinite linear;
+}
+
+.currentTime:hover {
+  background: rgba(255, 255, 0, 0.5);
+  box-shadow: 0 0 50px rgba(255, 255, 0, 1);
+  transform: scale(1.05); /* Réduction de l'agrandissement */
+}
+
+.currentTime__title {
+  font-size: 2rem; /* Taille réduite */
+  margin-bottom: 10px; /* Marges réduites */
+  color: #ff6f61;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff6f61;
+  animation: neonText 0.1s infinite alternate;
+}
+
+@keyframes neonText {
+  0% {
+    text-shadow: 0 0 10px #ff6f61;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff00ff; /* Réduction du glow */
+  }
+  100% {
+    text-shadow: 0 0 10px #ff6f61;
+  }
+}
+
+.currentTime__time {
+  font-size: 3rem; /* Taille réduite */
+  font-weight: bold;
+  color: #00ff00;
+  border: 3px solid #00ff00; /* Réduction de la bordure */
+  border-radius: 15px; /* Réduction du rayon */
+  padding: 10px; /* Réduction du padding */
+  background-color: rgba(0, 255, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05); /* Réduction du pulse */
+  }
+}
+
+.currentTime__time:hover {
+  transform: scale(1.1); /* Réduction de l'agrandissement */
+  box-shadow: 0 0 40px rgba(0, 255, 0, 1);
+}

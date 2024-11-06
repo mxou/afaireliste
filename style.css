@@ -1,0 +1,23 @@
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: black;
+  }
+}
+
+.todo {
+  border: 2px dashed black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.todo_btn {
+  width: 30px;
+  height: 30px;
+}

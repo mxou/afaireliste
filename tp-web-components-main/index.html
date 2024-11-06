@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="current-time.js"></script>
+    <script src="screen-size.js"></script>
+    <script src="custom-details.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <current-time format="gmt"></current-time>
+    <screen-size></screen-size>
+    <template id="custom-details">
+      <details>
+        <summary>
+          <slot name="summary"></slot>
+        </summary>
+        <slot name="content"></slot>
+      </details>
+    </template>
+
+    <custom-details>
+      <span slot="summary">Les 3 technologies des Web Components <br /></span>
+      <span slot="content"
+        ><ul>
+          <li>Monday left me broken</li>
+          <li>Turi ip ip ip, ipip ip turrrrip</li>
+          <li>Weli, welo, wlie</li>
+          <li>Gedagedigedagedao</li>
+        </ul></span
+      >
+    </custom-details>
+
+    <custom-details>
+      <span slot="summary">Le summary <br /></span>
+      <span slot="content">Le pouler être braiser</span>
+    </custom-details>
+  </body>
+</html>
